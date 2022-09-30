@@ -2,15 +2,9 @@ import React, { useEffect } from 'react';
 import './App.css';
 
 function App() {
-  let productName:string="";
-  let ShortDescription:string="";
-  let DetailedDescription:string="";
-  let ProductName:string="";
-  let Category:string="";
-  let StartingPrice:string="";
-  let BidEndDate:string="";
 
   var Data:any;
+
   useEffect(()=>{
     fetch("http://localhost:15815/seller/show-bids")
     .then(response=>response.json())
@@ -124,7 +118,7 @@ function App() {
     var StartingPrice:any = document.getElementById("StartingPrice");
     var BidEndDate:any = document.getElementById("BidEndDate");
     
-    if(value == "-1")
+    if(value === "-1")
     {
       productName.innerHTML ="";
       ShortDescription.innerHTML = "";
