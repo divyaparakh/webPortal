@@ -6,7 +6,8 @@ function App() {
   var Data:any;
 
   useEffect(()=>{
-    fetch("http://localhost:15815/seller/show-bids")
+    fetch("https://sellerapp20221003120442.azurewebsites.net/api/seller/GetAll")
+    //fetch("http://localhost:15815/seller/show-bids")
     .then(response=>response.json())
     .then(res=> {
       var ddl:any = document.getElementById("products");
